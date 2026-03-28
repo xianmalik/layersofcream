@@ -1,9 +1,14 @@
 ---
+import { getCollection } from 'astro:content';
 import CtaSection from '../components/CtaSection.astro';
 import MenuItem from '../components/MenuItem.astro';
 import MenuSection from '../components/MenuSection.astro';
 import NavBar from '../components/NavBar.astro';
 import Layout from '../layouts/Layout.astro';
+
+const sections = (await getCollection('menu')).sort((a, b) => a.data.order - b.data.order);
+const col1 = sections.filter((s) => s.data.column === 1);
+const col2 = sections.filter((s) => s.data.column === 2);
 ---
 
 <Layout title="Layers of Cream">
@@ -32,48 +37,23 @@ import Layout from '../layouts/Layout.astro';
     </header>
 
     <div class="grid md:grid-cols-2 gap-16 md:gap-24 relative z-10">
-      <MenuSection title="Cakes">
-        <MenuItem
-          name="Chocolate Fudge Cake"
-          price="৳1200 / ৳2400"
-          description="Options: 500gm or 1kg. Rich, dense fudge with a silky ganache finish."
-        />
-        <MenuItem
-          name="Chocolate Moist Cake"
-          price="৳750 / ৳1500"
-          description="Options: 500gm or 1kg. Airy, light sponge soaked in cocoa richness."
-        />
-        <MenuItem
-          name="Milk Cake"
-          price="৳1000"
-          description="A classic tres leches inspired cream-soaked delight."
-        />
-        <MenuItem
-          name="Mocha Cake"
-          price="৳2800"
-          description="Infused with premium arabica coffee beans and dark chocolate."
-        />
-      </MenuSection>
-
       <div class="space-y-16">
-        <MenuSection title="Puddings">
-          <MenuItem
-            name="Egg Pudding"
-            price="৳500 / ৳800"
-            description="Available in Small or Large. Smooth, golden caramel custard."
-          />
-          <MenuItem
-            name="Coconut Pudding"
-            price="৳100"
-            description="Individual serving. Refreshing tropical notes with real coconut milk."
-          />
-        </MenuSection>
-
-        <MenuSection title="Special Dessert">
-          <MenuItem name="Brownie" price="৳1600" />
-          <MenuItem name="Oreo Brownie" price="৳1800" />
-          <MenuItem name="Biscoff Brownie" price="৳2000" />
-        </MenuSection>
+        {col1.map((section) => (
+          <MenuSection title={section.data.title}>
+            {section.data.items.map((item) => (
+              <MenuItem name={item.name} price={item.price} description={item.description} />
+            ))}
+          </MenuSection>
+        ))}
+      </div>
+      <div class="space-y-16">
+        {col2.map((section) => (
+          <MenuSection title={section.data.title}>
+            {section.data.items.map((item) => (
+              <MenuItem name={item.name} price={item.price} description={item.description} />
+            ))}
+          </MenuSection>
+        ))}
       </div>
     </div>
 
