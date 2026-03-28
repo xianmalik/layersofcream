@@ -1,9 +1,82 @@
 ---
+import CtaSection from '../components/CtaSection.astro';
+import MenuItem from '../components/MenuItem.astro';
+import MenuSection from '../components/MenuSection.astro';
+import NavBar from '../components/NavBar.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Layers of Cream">
-  <main class="max-w-4xl mx-auto px-4 py-16">
-    <h1 class="text-4xl font-bold">Layers of Cream</h1>
+  <NavBar />
+
+  <main class="pb-20 px-6 max-w-5xl mx-auto relative overflow-hidden">
+    <!-- Decorative Sprinkles -->
+    <div class="sprinkle top-40 left-10 text-primary-fixed text-4xl">
+      <span class="material-symbols-outlined">icecream</span>
+    </div>
+    <div class="sprinkle top-1/2 -right-4 text-tertiary text-3xl rotate-12">
+      <span class="material-symbols-outlined">nutrition</span>
+    </div>
+    <div class="sprinkle bottom-40 left-4 text-primary text-2xl -rotate-12">
+      <span class="material-symbols-outlined">hanami_dango</span>
+    </div>
+
+    <!-- Menu Header -->
+    <header class="text-center mb-20">
+      <h1 class="font-headline font-extrabold text-6xl md:text-7xl text-primary mb-4 tracking-tight">
+        Our Dessert Menu
+      </h1>
+      <p class="font-body text-lg text-on-surface-variant max-w-lg mx-auto">
+        Hand-crafted patisseries, baked fresh daily with the finest ingredients and a dash of magic.
+      </p>
+    </header>
+
+    <div class="grid md:grid-cols-2 gap-16 md:gap-24 relative z-10">
+      <MenuSection title="Cakes">
+        <MenuItem
+          name="Chocolate Fudge Cake"
+          price="৳1200 / ৳2400"
+          description="Options: 500gm or 1kg. Rich, dense fudge with a silky ganache finish."
+        />
+        <MenuItem
+          name="Chocolate Moist Cake"
+          price="৳750 / ৳1500"
+          description="Options: 500gm or 1kg. Airy, light sponge soaked in cocoa richness."
+        />
+        <MenuItem
+          name="Milk Cake"
+          price="৳1000"
+          description="A classic tres leches inspired cream-soaked delight."
+        />
+        <MenuItem
+          name="Mocha Cake"
+          price="৳2800"
+          description="Infused with premium arabica coffee beans and dark chocolate."
+        />
+      </MenuSection>
+
+      <div class="space-y-16">
+        <MenuSection title="Puddings">
+          <MenuItem
+            name="Egg Pudding"
+            price="৳500 / ৳800"
+            description="Available in Small or Large. Smooth, golden caramel custard."
+          />
+          <MenuItem
+            name="Coconut Pudding"
+            price="৳100"
+            description="Individual serving. Refreshing tropical notes with real coconut milk."
+          />
+        </MenuSection>
+
+        <MenuSection title="Special Dessert">
+          <MenuItem name="Brownie" price="৳1600" />
+          <MenuItem name="Oreo Brownie" price="৳1800" />
+          <MenuItem name="Biscoff Brownie" price="৳2000" />
+        </MenuSection>
+      </div>
+    </div>
+
+    <CtaSection />
   </main>
 </Layout>

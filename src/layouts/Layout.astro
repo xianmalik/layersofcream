@@ -1,5 +1,7 @@
 ---
+import { getImage } from 'astro:assets';
 import { SEO } from 'astro-seo';
+import logoImage from '../assets/logo.png';
 import '../styles/global.css';
 
 interface Props {
@@ -13,6 +15,9 @@ const {
   description = 'Layers of Cream',
   image,
 } = Astro.props;
+
+const favicon32 = await getImage({ src: logoImage, width: 32, height: 32, format: 'png' });
+const favicon180 = await getImage({ src: logoImage, width: 180, height: 180, format: 'png' });
 ---
 
 <!doctype html>
@@ -20,7 +25,14 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href={favicon32.src} sizes="32x32" />
+    <link rel="apple-touch-icon" href={favicon180.src} sizes="180x180" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Be+Vietnam+Pro:wght@100..900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
     <SEO
       title={title}
       description={description}
@@ -36,7 +48,7 @@ const {
       }}
     />
   </head>
-  <body>
+  <body class="font-body text-on-surface" style="background: linear-gradient(to bottom, #fff4f4, #fcedee)">
     <slot />
   </body>
 </html>
