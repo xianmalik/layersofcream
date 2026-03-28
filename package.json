@@ -1,5 +1,5 @@
 {
-  "name": "lunar-limit",
+  "name": "layersofcream",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -9,7 +9,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check --write ."
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
@@ -17,5 +20,8 @@
     "astro": "^6.1.1",
     "astro-seo": "^1.1.0",
     "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.9"
   }
 }
