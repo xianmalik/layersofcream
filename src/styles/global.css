@@ -73,19 +73,27 @@
   --radius-full: 9999px;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+/* Signature CTA gradient — 135° strawberry glaze */
+@utility cta-gradient {
+  background: linear-gradient(135deg, #9c3b3e, #fc8585);
 }
 
-.dotted-line {
-  border-bottom: 2px dotted #b6aaab;
-  flex-grow: 1;
-  margin: 0 12px;
-  margin-bottom: 5px;
+/* Warm ambient shadow — primary at 10% opacity */
+@utility shadow-warm {
+  box-shadow: 0 24px 48px rgba(156, 59, 62, 0.1);
+}
+
+/* Frosted sugar glassmorphism */
+@utility glass-frost {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 .sprinkle {
   position: absolute;
   pointer-events: none;
-  opacity: 0.6;
 }

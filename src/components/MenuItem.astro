@@ -8,15 +8,20 @@ interface Props {
 const { name, price, description } = Astro.props;
 ---
 
-<div class="group">
-  <div class="flex items-end justify-between mb-1">
-    <h3 class="font-headline font-bold text-xl text-primary group-hover:translate-x-1 transition-transform">
+<div
+  class="group rounded-lg bg-surface-container-lowest px-5 py-4 hover:shadow-[0_4px_24px_rgba(156,59,62,0.06)] transition-all duration-300"
+>
+  <div class="flex items-baseline justify-between gap-4">
+    <h3
+      class="font-headline font-bold text-xl text-primary group-hover:translate-x-1 transition-transform"
+    >
       {name}
     </h3>
-    <div class="dotted-line"></div>
-    <span class="font-headline font-bold text-primary">{price}</span>
+    <span class="font-headline font-bold text-primary shrink-0">{price}</span>
   </div>
-  {description && (
-    <p class="text-sm text-on-surface-variant font-label italic">{description}</p>
-  )}
+  {
+    description && (
+      <p class="text-sm text-on-surface-variant font-label italic mt-1">{description}</p>
+    )
+  }
 </div>

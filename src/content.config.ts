@@ -12,7 +12,7 @@ const menu = defineCollection({
         name: z.string(),
         price: z.string(),
         description: z.string().optional(),
-      }),
+      })
     ),
   }),
 });
