@@ -9,6 +9,9 @@ items:
   - name: Chocolate Moist Cake
     price: "৳750 / ৳1500"
     description: "Options: 500gm or 1kg. Airy, light sponge soaked in cocoa richness."
+  - name: Vanilla Moist Cake
+    price: "৳850 / ৳1700"
+    description: "Options: 500gm or 1kg. Butter and oil for a rich, velvety crumb, layered with vanilla buttercream."
   - name: Milk Cake
     price: "৳1000"
     description: "A classic tres leches inspired cream-soaked delight."
