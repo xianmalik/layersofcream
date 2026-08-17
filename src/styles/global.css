@@ -62,9 +62,10 @@
   --color-outline-variant: #b6aaab;
 
   /* Fonts */
-  --font-headline: "Plus Jakarta Sans", sans-serif;
-  --font-body: "Be Vietnam Pro", sans-serif;
-  --font-label: "Be Vietnam Pro", sans-serif;
+  --font-display: "Lora", serif;
+  --font-headline: "Google Sans Flex", sans-serif;
+  --font-body: "Google Sans Flex", sans-serif;
+  --font-label: "Google Sans Flex", sans-serif;
 
   /* Border radius */
   --radius: 1rem;
@@ -81,6 +82,14 @@
 /* Warm ambient shadow — primary at 10% opacity */
 @utility shadow-warm {
   box-shadow: 0 24px 48px rgba(156, 59, 62, 0.1);
+}
+
+/* Dotted leader line between a menu item's name and its price */
+@utility leader-dots {
+  height: 2px;
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+  background-size: 6px 2px;
+  background-repeat: repeat-x;
 }
 
 /* Frosted sugar glassmorphism */
