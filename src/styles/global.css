@@ -84,12 +84,11 @@
   box-shadow: 0 24px 48px rgba(156, 59, 62, 0.1);
 }
 
-/* Dotted leader line between a menu item's name and its price */
-@utility leader-dots {
-  height: 2px;
-  background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
-  background-size: 6px 2px;
-  background-repeat: repeat-x;
+/* Leader line between a menu item's name and its price */
+@utility leader-line {
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.35;
 }
 
 /* Frosted sugar glassmorphism */
