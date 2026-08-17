@@ -9,22 +9,24 @@ const { name, price, description } = Astro.props;
 ---
 
 <div class="group">
-  <div class="flex items-end gap-1">
+  <div class="flex items-center gap-3">
     <h3
       class="font-display text-lg md:text-xl leading-6 capitalize tracking-wide text-on-surface"
     >
       {name}
     </h3>
-    <span class="leader-line flex-1 min-w-6 mb-[0.35em] text-outline-variant" aria-hidden="true"></span>
+    <span class="leader-line flex-1 min-w-6 text-outline-variant" aria-hidden="true"></span>
     <span
-      class="font-body text-lg font-normal tracking-wide leading-6 text-on-surface shrink-0 tabular-nums"
+      class="font-body text-base font-normal tracking-wide leading-6 text-on-surface shrink-0 tabular-nums"
     >
       {price}
     </span>
   </div>
   {
     description && (
-      <p class="font-body text-sm text-on-surface-variant mt-2 max-w-md">{description}</p>
+      <p class="font-body text-[13px] leading-[18px] text-on-surface opacity-50 mt-2 max-w-md">
+        {description}
+      </p>
     )
   }
 </div>
