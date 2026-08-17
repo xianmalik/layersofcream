@@ -2,69 +2,75 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  /* Colors — Material Design 3 tokens */
-  --color-background: #fff4f4;
-  --color-surface: #fff4f4;
-  --color-surface-bright: #fff4f4;
-  --color-surface-dim: #e1d0d2;
-  --color-surface-variant: #e9d9db;
+  /* Colors — Material Design 3 tokens
+     Sourced from chocolate brown #2b1a17, warm caramel #96551f, cream beige #dfd196 */
+  --color-background: #fdfbf4;
+  --color-surface: #fdfbf4;
+  --color-surface-bright: #fffefa;
+  --color-surface-dim: #e8dfc8;
+  --color-surface-variant: #efe6d0;
   --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #fcedee;
-  --color-surface-container: #f4e5e6;
-  --color-surface-container-high: #efdfe0;
-  --color-surface-container-highest: #e9d9db;
-  --color-surface-tint: #9c3b3e;
-  --color-inverse-surface: #130d0e;
-  --color-inverse-on-surface: #a69a9b;
+  --color-surface-container-low: #f7f0df;
+  --color-surface-container: #f2ead5;
+  --color-surface-container-high: #ede3ca;
+  --color-surface-container-highest: #e8ddc0;
+  --color-surface-tint: #96551f;
+  --color-inverse-surface: #2b1a17;
+  --color-inverse-on-surface: #f0e6d2;
 
-  --color-on-background: #342d2e;
-  --color-on-surface: #342d2e;
-  --color-on-surface-variant: #63595a;
+  --color-on-background: #2b1a17;
+  --color-on-surface: #2b1a17;
+  --color-on-surface-variant: #6b564a;
 
-  --color-primary: #9c3b3e;
-  --color-primary-dim: #8c3033;
-  --color-primary-fixed: #fc8585;
-  --color-primary-fixed-dim: #ec7978;
-  --color-primary-container: #fc8585;
-  --color-on-primary: #ffefee;
-  --color-on-primary-fixed: #230002;
-  --color-on-primary-fixed-variant: #651219;
-  --color-on-primary-container: #590711;
-  --color-inverse-primary: #fc8585;
+  --color-primary: #96551f;
+  --color-primary-dim: #7e4718;
+  --color-primary-fixed: #f2c99a;
+  --color-primary-fixed-dim: #e5b47f;
+  --color-primary-container: #f2c99a;
+  --color-on-primary: #fff8ec;
+  --color-on-primary-fixed: #2b1608;
+  --color-on-primary-fixed-variant: #6e3d12;
+  --color-on-primary-container: #4a2a0c;
+  --color-inverse-primary: #f0b87e;
 
-  --color-secondary: #6d5658;
-  --color-secondary-dim: #604a4d;
-  --color-secondary-fixed: #f8d8db;
-  --color-secondary-fixed-dim: #e9cacd;
-  --color-secondary-container: #f8d8db;
-  --color-on-secondary: #ffeff0;
-  --color-on-secondary-fixed: #4d383b;
-  --color-on-secondary-fixed-variant: #6b5457;
-  --color-on-secondary-container: #614a4d;
+  --color-secondary: #6b564a;
+  --color-secondary-dim: #5a4739;
+  --color-secondary-fixed: #eddccb;
+  --color-secondary-fixed-dim: #dfcdb8;
+  --color-secondary-container: #eddccb;
+  --color-on-secondary: #fff8ec;
+  --color-on-secondary-fixed: #2b1a17;
+  --color-on-secondary-fixed-variant: #57443a;
+  --color-on-secondary-container: #4a3a30;
 
-  --color-tertiary: #605d34;
-  --color-tertiary-dim: #54512a;
-  --color-tertiary-fixed: #fef8c3;
-  --color-tertiary-fixed-dim: #f0eab6;
-  --color-tertiary-container: #fef8c3;
-  --color-on-tertiary: #faf5c0;
-  --color-on-tertiary-fixed: #4f4d26;
-  --color-on-tertiary-fixed-variant: #6d6940;
-  --color-on-tertiary-container: #625f36;
+  --color-tertiary: #8a7a45;
+  --color-tertiary-dim: #766838;
+  --color-tertiary-fixed: #dfd196;
+  --color-tertiary-fixed-dim: #d2c384;
+  --color-tertiary-container: #dfd196;
+  --color-on-tertiary: #2b2408;
+  --color-on-tertiary-fixed: #332d0d;
+  --color-on-tertiary-fixed-variant: #5c5222;
+  --color-on-tertiary-container: #4a421a;
 
-  --color-error: #b41340;
-  --color-error-dim: #a70138;
-  --color-error-container: #f74b6d;
-  --color-on-error: #ffefef;
-  --color-on-error-container: #510017;
+  --color-error: #b3261e;
+  --color-error-dim: #922019;
+  --color-error-container: #f5d3ce;
+  --color-on-error: #fff8ec;
+  --color-on-error-container: #4a0f0a;
 
-  --color-outline: #7f7475;
-  --color-outline-variant: #b6aaab;
+  --color-outline: #857567;
+  --color-outline-variant: #c8b9a5;
+
+  /* Heritage strawberry — reserved for the main page title */
+  --color-strawberry: #9c3b3e;
 
   /* Fonts */
-  --font-headline: "Plus Jakarta Sans", sans-serif;
-  --font-body: "Be Vietnam Pro", sans-serif;
-  --font-label: "Be Vietnam Pro", sans-serif;
+  --font-display: "Lora", serif;
+  --font-script: "Dawning of a New Day", cursive;
+  --font-headline: "Google Sans Flex", sans-serif;
+  --font-body: "Google Sans Flex", sans-serif;
+  --font-label: "Google Sans Flex", sans-serif;
 
   /* Border radius */
   --radius: 1rem;
@@ -73,14 +79,21 @@
   --radius-full: 9999px;
 }
 
-/* Signature CTA gradient — 135° strawberry glaze */
+/* Signature CTA gradient — 135° caramel glaze */
 @utility cta-gradient {
-  background: linear-gradient(135deg, #9c3b3e, #fc8585);
+  background: linear-gradient(135deg, #2b1a17, #96551f);
 }
 
-/* Warm ambient shadow — primary at 10% opacity */
+/* Warm ambient shadow — chocolate brown at 12% opacity */
 @utility shadow-warm {
-  box-shadow: 0 24px 48px rgba(156, 59, 62, 0.1);
+  box-shadow: 0 24px 48px rgba(43, 26, 23, 0.12);
+}
+
+/* Leader line between a menu item's name and its price */
+@utility leader-line {
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.35;
 }
 
 /* Frosted sugar glassmorphism */
