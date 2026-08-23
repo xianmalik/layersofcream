@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Survey"
+  description="Tell us what you think — share your feedback with Layers of Cream and help us bake better."
+>
+  <!--
+    `data-tf-live` is Typeform's full-page embed: it injects its own
+    100vw x 100vh, z-index 10001 overlay, so any page chrome placed
+    around it is covered. Swap to `data-tf-widget` if this should sit
+    inline within the site layout instead.
+  -->
+  <div data-tf-live="01M0Q0AQ7XAM5RYQ261XRF3SK5"></div>
+  <script is:inline src="https://embed.typeform.com/next/embed.js"></script>
+</Layout>
