@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://layersofcream.com/sitemap-index.xml
